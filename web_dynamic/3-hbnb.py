@@ -19,7 +19,7 @@ def close_db(error):
     storage.close()
 
 
-@app.route('/1-hbnb', strict_slashes=False)
+@app.route('/3-hbnb', strict_slashes=False)
 def hbnb_filters(id=None):
     """
     handles request to custom template with states, cities & amentities
@@ -32,7 +32,7 @@ def hbnb_filters(id=None):
                  for user in storage.all('User').values())
     cache_id = (str(uuid4()))
 
-    return render_template('1-hbnb.html',
+    return render_template('3-hbnb.html',
                            states=states,
                            amenities=amenities,
                            places=places,
